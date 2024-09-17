@@ -1,0 +1,92 @@
+TUGAS 1
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int n, i, j, temp;
+    scanf("%d", &n);
+
+    int arr[n];
+    
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Bubble Sort untuk mengurutkan array
+    for (i = 0; i < n-1; i++) {
+        for (j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+
+    // Output hasil pengurutan
+    for (i = 0; i < n; i++) {
+        printf("%d\n", arr[i]);
+    }
+
+    return 0;
+}
+
+
+
+TUGAS 2
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+     char A[100], B[100];
+    
+    scanf("%s", A);
+    scanf("%s", B);
+    
+    if (strlen(A) != strlen(B)) {
+        printf("BERBEDA\n");
+    } else {
+        if (strcmp(A, B) == 0) {
+            printf("IDENTIK\n");
+        } else {
+            printf("MIRIP\n");
+        }
+    }
+
+
+
+TUGAS 3 
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+     int nilai;
+     
+     scanf("%d", &nilai);
+     
+     int count = 0; 
+     for(int j = 1; j <= nilai; j++) {    
+         if((nilai % j) == 0) {
+             count++;    
+         }
+     }
+    
+     if(count == 2) {
+         printf("PRIMA", nilai);
+     } else {
+         printf("BUKAN", nilai);
+     }
+  return 0;
+}
